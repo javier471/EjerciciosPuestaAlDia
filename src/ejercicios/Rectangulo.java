@@ -8,8 +8,8 @@ private double ancho;
 
 public Rectangulo(double longitud, double ancho) {
 	super();
-	this.longitud = setLongitud(longitud);
-	this.ancho = setAncho(ancho);
+	this.setLongitud(longitud);
+	this.setAncho(ancho);
 }
 private double getLongitud() {
 	return longitud;
