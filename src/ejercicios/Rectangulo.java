@@ -9,29 +9,31 @@ private double ancho;
 public Rectangulo(double longitud, double ancho) {
 	super();
 	this.longitud = setLongitud(longitud);
-	this.ancho = ancho;
+	this.ancho = setAncho(ancho);
 }
 private double getLongitud() {
 	return longitud;
 }
-private void setLongitud(double largo) {
+private double setLongitud(double largo) {
 	if (largo>20 || largo<1) {
 		this.longitud=1;
 	}
 	else {
 		this.longitud = largo;
 	}
+	return this.longitud;
 }
 private double getAncho() {
 	return ancho;
 }
-private void setAncho(double ancho) {
+private double setAncho(double ancho) {
 	if (ancho>20 || ancho<1) {
 		this.ancho=1;
 	}
 	else {
 		this.ancho = ancho;
 	}
+	return this.ancho;
 }
 public static double area(double ancho, double longitud) {
 	return ancho*longitud;
