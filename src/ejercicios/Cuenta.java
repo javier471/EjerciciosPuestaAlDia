@@ -5,42 +5,37 @@ public class Cuenta {
 	private String ncc;
 	private int numingresos;
 	private int numreintegros;
-	public Cuenta(double saldo, String ncc) {
+	public Cuenta(double saldo, String ncc)throws Exception {
 		super();
-		this.saldo = saldo;
+		if(saldo<0) {
+			throw new Exception();
+		}
+		else {
+			this.saldo = saldo;
+			this.numingresos=1;
+		}
 		this.ncc = ncc;
-		this.numingresos=1;
+
 	}
 	public double getSaldo() {
 		return saldo;
 	}
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
-	}
 	public String getNcc() {
 		return ncc;
-	}
-	public void setNcc(String ncc) {
-		this.ncc = ncc;
 	}
 	public int getNumingresos() {
 		return numingresos;
 	}
-	public void setNumingresos(int numingresos) {
-		this.numingresos = numingresos;
-	}
 	public int getNumreintegros() {
 		return numreintegros;
 	}
-	public void setNumreintegros(int numreintegros) {
-		this.numreintegros = numreintegros;
-	}
-	
 	public void reintegro(double cantidad) {
 		this.saldo=saldo-cantidad;
+		this.numreintegros++;
 	}
 	public void ingreso(double cantidad) {
 		this.saldo=saldo+cantidad;
+		this.numreintegros++;
 	}
 	@Override
 	public String toString() {
