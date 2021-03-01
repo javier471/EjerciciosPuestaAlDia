@@ -42,7 +42,22 @@ public class MaquinaCafe {
 		monedero=monedero+1.5;
 		return dinero -1.5;
 	}
+	public int getDepositocafe() {
+		return depositocafe;
+	}
+	public int getDepositoleche() {
+		return depositoleche;
+	}
+	public int getDepositovasos() {
+		return depositovasos;
+	}
 	
+	public double getMonedero() {
+		return monedero;
+	}
+	public void setMonedero(double monedero) {
+		this.monedero = monedero;
+	}
 	
 	
 	
