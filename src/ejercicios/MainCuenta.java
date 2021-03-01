@@ -9,13 +9,13 @@ public class MainCuenta {
 		Scanner teclado=new Scanner(System.in);
 		Cuenta c1= new Cuenta(50,"21221");
 		System.out.println(c1);
-		int opcion;
+		int opcion=0;
 		System.out.println("Introuzca 1 para un reintegro"
 				+" Introduzca un 2 para un ingreso"
 				+" Introduzca un 3 para hacer una consulta"
 				+" Introduza un 4 para finalizar");
 		char salir= 'N';
-		while(salir=='N') {
+		while(salir=='N' && opcion<5) {
 		System.out.println("Introduzca opción");
 		opcion=Integer.parseInt(teclado.nextLine());
 		switch(opcion) {
