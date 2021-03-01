@@ -14,6 +14,8 @@ public class MainCuenta {
 				+" Introduzca un 2 para un ingreso"
 				+" Introduzca un 3 para hacer una consulta"
 				+" Introduza un 4 para finalizar");
+		char salir= 'N';
+		while(salir=='N') {
 		System.out.println("Introduzca opción");
 		opcion=Integer.parseInt(teclado.nextLine());
 		switch(opcion) {
@@ -33,12 +35,12 @@ public class MainCuenta {
 				break;
 			case 4:
 				System.out.println("¿Quiere salir?");
-				char resp=teclado.nextLine().charAt(0);
-				if (resp=='S' || resp=='s') {
+				salir=teclado.nextLine().charAt(0);
+				if (salir!='N') {
 					break;
 				}			
 		}
-		
+		}
 		}
 	}
 
