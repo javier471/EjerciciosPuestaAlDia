@@ -24,16 +24,19 @@ public class MainMaquinaCafe {
 				System.out.println("Introduzca cantidad");
 				cantidad=Double.parseDouble(teclado.nextLine());
 				maquina.servicafe(cantidad);
+				System.out.println("Su cambio es "+ (cantidad- 1));
 				break;
 			case 2:
 				System.out.println("Introduzca cantidad");
 				cantidad=Double.parseDouble(teclado.nextLine());
 				maquina.servirleche(cantidad);
+				System.out.println("Su cambio es "+ (cantidad- 0.8));
 				break;
 			case 3:
 				System.out.println("Introduzca cantidad");
 				cantidad=Double.parseDouble(teclado.nextLine());
 				maquina.servircafeconleche(cantidad);
+				System.out.println("Su cambio es "+ (cantidad- 1.5));
 				break;
 			case 4:
 				System.out.println(maquina.getDepositocafe());

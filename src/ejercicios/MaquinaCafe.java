@@ -23,19 +23,28 @@ public class MaquinaCafe {
 		this.depositoleche=MAXIMOLECHE;
 		this.depositovasos=MAXIMOVASOS;	
 	}
-	public double servicafe(double dinero) {
+	public double servicafe(double dinero) throws Exception {
+		if (monedero<dinero) {
+			throw new Exception();
+		}
 		this.depositocafe--;
 		this.depositovasos--;
 		this.monedero=this.monedero+1;
 		return dinero-1;
 	}
-	public double servirleche(double dinero) {
+	public double servirleche(double dinero) throws Exception {
+		if (monedero<dinero) {
+			throw new Exception();
+		}
 		depositovasos--;
 		depositoleche--;
 		monedero=monedero+0.8;
 		return dinero-0.8;
 	}
-	public double servircafeconleche(double dinero) {
+	public double servircafeconleche(double dinero) throws Exception {
+		if (monedero<dinero) {
+			throw new Exception();
+		}
 		depositovasos--;
 		depositoleche--;
 		depositocafe--;
