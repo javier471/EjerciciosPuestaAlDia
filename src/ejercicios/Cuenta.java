@@ -13,6 +13,7 @@ public class Cuenta {
 		else {
 			this.saldo = saldo;
 			this.numingresos=1;
+			this.numreintegros=0;
 		}
 		this.ncc = ncc;
 
@@ -29,11 +30,17 @@ public class Cuenta {
 	public int getNumreintegros() {
 		return numreintegros;
 	}
-	public void reintegro(double cantidad) {
+	public void reintegro(double cantidad) throws Exception {
+		if (cantidad<0) {
+			throw new Exception();
+		}
 		this.saldo=saldo-cantidad;
 		this.numreintegros++;
 	}
-	public void ingreso(double cantidad) {
+	public void ingreso(double cantidad) throws Exception {
+		if (cantidad<0) {
+			throw new Exception();
+		}
 		this.saldo=saldo+cantidad;
 		this.numreintegros++;
 	}
