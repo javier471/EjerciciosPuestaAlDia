@@ -39,7 +39,7 @@ public class Cuenta {
 	}
 	public void ingreso(double cantidad) throws Exception {
 		if (cantidad<0) {
-			throw new Exception();
+			throw new Exception("Ingresa una cantidad válida");
 		}
 		this.saldo=saldo+cantidad;
 		this.numreintegros++;
