@@ -8,7 +8,7 @@ public class Cuenta {
 	public Cuenta(double saldo, String ncc)throws Exception {
 		super();
 		if(saldo<0) {
-			throw new Exception();
+			throw new Exception("Debe crear una cuenta con saldo válido");
 		}
 		else {
 			this.saldo = saldo;
@@ -32,7 +32,10 @@ public class Cuenta {
 	}
 	public void reintegro(double cantidad) throws Exception {
 		if (cantidad<0) {
-			throw new Exception();
+			throw new Exception("Introduce una cantidad válida");
+		}
+		else if(cantidad>this.saldo) {
+			throw new Exception("La cantidad es mayor que su saldo");
 		}
 		this.saldo=saldo-cantidad;
 		this.numreintegros++;
