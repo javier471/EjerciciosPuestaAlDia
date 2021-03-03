@@ -16,12 +16,10 @@ public class MaquinaCafe {
 		if (monedero<0) {
 			throw new Exception("Para crear máquina introduzca cantidad positiva");
 		}
-		else {
 			this.depositocafe = MAXIMOCAFE;
 			this.depositoleche = MAXIMOLECHE;
 			this.depositovasos = MAXIMOVASOS;
 			this.monedero = monedero;
-		}
 		
 	}
 	public void llenardepositos() {
@@ -36,23 +34,41 @@ public class MaquinaCafe {
 		else if(depositovasos<1 || depositocafe<1) {
 			throw new Exception("Es necesario rellenar depósitos");
 		}
-		this.depositocafe--;
-		this.depositovasos--;
-		this.monedero=this.monedero+preciocafe;
-		return dinero-preciocafe;
+		else if(dinero<preciocafe){
+			throw new Exception("Dinero insuficiente. Su dinero es: "+dinero);
+		}
+			this.depositocafe--;
+			this.depositovasos--;
+			this.monedero=this.monedero+preciocafe;
+			return dinero-preciocafe;
+		
+		
 	}
 	public double servirleche(double dinero) throws Exception {
 		if (monedero<dinero) {
 			throw new Exception("No tengo cambio para esa cantidad");
 		}
-		depositovasos--;
-		depositoleche--;
-		monedero=monedero+precioleche;
-		return dinero-precioleche;
+		else if(depositovasos<1 || depositoleche<1) {
+			throw new Exception("Es necesario rellenar depósitos");
+		}
+		else if (dinero<precioleche){
+			throw new Exception("Dinero insuficiente. Su dinero es:"+dinero);
+			
+		}
+			depositovasos--;
+			depositoleche--;
+			monedero=monedero+precioleche;
+			return dinero-precioleche;
 	}
 	public double servircafeconleche(double dinero) throws Exception {
 		if (monedero<dinero) {
 			throw new Exception("No tengo cambio para esa cantidad");
+		}
+		else if(depositovasos<1 || depositoleche<1 || depositovasos<1) {
+			throw new Exception("Es necesario rellenar depósitos");
+		}
+		else if(dinero<preciocafeconleche){
+			throw new Exception("Dinero insuficiente. Su dinero es: "+dinero );
 		}
 		depositovasos--;
 		depositoleche--;
