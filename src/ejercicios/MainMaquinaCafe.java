@@ -29,13 +29,11 @@ public class MainMaquinaCafe {
 				case 2:
 					System.out.println("Introduzca cantidad");
 					cantidad=Double.parseDouble(teclado.nextLine());
-					maquina.servirleche(cantidad);
 					System.out.println("Su cambio es "+ maquina.servirleche(cantidad));
 					break;
 				case 3:
 					System.out.println("Introduzca cantidad");
 					cantidad=Double.parseDouble(teclado.nextLine());
-					maquina.servircafeconleche(cantidad);
 					System.out.println("Su cambio es "+ maquina.servircafeconleche(cantidad));
 					break;
 				case 4:
