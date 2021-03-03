@@ -16,10 +16,13 @@ public class MaquinaCafe {
 		if (monedero<0) {
 			throw new Exception("Para crear máquina introduzca cantidad positiva");
 		}
-		this.depositocafe = MAXIMOCAFE;
-		this.depositoleche = MAXIMOLECHE;
-		this.depositovasos = MAXIMOVASOS;
-		this.monedero = monedero;
+		else {
+			this.depositocafe = MAXIMOCAFE;
+			this.depositoleche = MAXIMOLECHE;
+			this.depositovasos = MAXIMOVASOS;
+			this.monedero = monedero;
+		}
+		
 	}
 	public void llenardepositos() {
 		this.depositocafe=MAXIMOCAFE;
@@ -29,6 +32,9 @@ public class MaquinaCafe {
 	public double servicafe(double dinero) throws Exception {
 		if (monedero<dinero) {
 			throw new Exception("No tengo cambio para esa cantidad");
+		}
+		else if(depositovasos<1 || depositocafe<1) {
+			throw new Exception("Es necesario rellenar depósitos");
 		}
 		this.depositocafe--;
 		this.depositovasos--;
