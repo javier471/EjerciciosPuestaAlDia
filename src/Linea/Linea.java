@@ -13,6 +13,7 @@ public class Linea {
 		this.lineaa=new Punto(0,0);
 		this.lineab=new Punto(0,0);
 	}
+
 	public Punto getLineaa() {
 		return lineaa;
 	}
@@ -40,6 +41,11 @@ public class Linea {
 	public void moverAbajo(double y) {
 		this.lineaa.setCoory(y-this.lineaa.getCoory());
 		this.lineab.setCoory(y-this.lineab.getCoory());
+	}
+	
+	@Override
+	public String toString() {
+		return "Linea [lineaa=" + lineaa + ", lineab=" + lineab + "]";
 	}
 	@Override
 	public int hashCode() {
