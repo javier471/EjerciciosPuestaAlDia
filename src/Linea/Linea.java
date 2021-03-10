@@ -34,8 +34,12 @@ public class Linea {
 		this.lineab.setCoorx(x-this.lineab.getCoorx());
 	}
 	public void moverArriba(double y) {
-		this.lineaa.setCoory(y+this.lineaa.getCoorx());
+		this.lineaa.setCoory(y+this.lineaa.getCoory());
 		this.lineab.setCoory(y+this.lineab.getCoory());
+	}
+	public void moverAbajo(double y) {
+		this.lineaa.setCoory(y-this.lineaa.getCoory());
+		this.lineab.setCoory(y-this.lineab.getCoory());
 	}
 	@Override
 	public int hashCode() {
