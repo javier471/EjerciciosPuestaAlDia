@@ -8,5 +8,19 @@ public class Linea {
 		this.lineaa = lineaa;
 		this.lineab = lineab;
 	}
-	
+	public Punto getLineaa() {
+		return lineaa;
+	}
+	public void setLineaa(Punto lineaa) {
+		this.lineaa = lineaa;
+	}
+	public Punto getLineab() {
+		return lineab;
+	}
+	public void setLineab(Punto lineab) {
+		this.lineab = lineab;
+	}
+	public void moverIzquierda() {
+		
+	}
 }
