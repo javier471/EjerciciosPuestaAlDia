@@ -10,6 +10,7 @@ public class MainProducto {
 		System.out.println(p2);
 		p1.precioIva();
 		System.out.println(p1);
+		System.out.println(p2);
 	}
 
 }
