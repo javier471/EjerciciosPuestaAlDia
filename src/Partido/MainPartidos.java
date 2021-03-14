@@ -5,7 +5,7 @@ public class MainPartidos {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		Equipo e1=new Equipo("Madrid","Bernabeu","Madrid");
-		Equipo e2=new Equipo("Atleti","Wanda","Madrid");
+		Equipo e2=new Equipo("Madrid","Wanda","Madrid");
 		Equipo e3=new Equipo("Valencia","Mestalla","Valencia");
 		Equipo e4=new Equipo("Sevilla","Nervion","Sevilla");
 
