@@ -4,7 +4,7 @@ public class EjerBinario {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String aux="11100000";
+		String aux="11100100";
 		System.out.println(sumaBinario(aux));
 	}
 	
