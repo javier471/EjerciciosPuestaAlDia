@@ -58,7 +58,25 @@ public class Telefono {
 		this.mensaje3="";
 		this.numeromensajes=0;
 	}
-
+	
+	public void borrarMensaje(int mensaje) throws Exception {
+		if (mensaje<1 || mensaje>3) {
+			throw new Exception();
+		}
+		switch(mensaje) {
+			case 1:
+				this.mensaje1="";
+				break;
+			case 2:
+				this.mensaje2="";
+				break;
+			case 3:
+				this.mensaje3="";
+				break;
+		}
+		this.numeromensajes--;
+		
+	}
 	@Override
 	public String toString() {
 		return "Telefono [mensaje1=" + mensaje1 + ", mensaje2=" + mensaje2 + ", mensaje3=" + mensaje3
