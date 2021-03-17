@@ -5,7 +5,6 @@ public class Telefono {
 	private String mensaje2="";
 	private String mensaje3="";
 	private int numeromensajes;
-	private final int MAXIMOMENSAJES=3;
 	public Telefono() {
 		super();
 	}
@@ -81,6 +80,46 @@ public class Telefono {
 	public String toString() {
 		return "Telefono [mensaje1=" + mensaje1 + ", mensaje2=" + mensaje2 + ", mensaje3=" + mensaje3
 				+ ", numeromensajes=" + numeromensajes + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((mensaje1 == null) ? 0 : mensaje1.hashCode());
+		result = prime * result + ((mensaje2 == null) ? 0 : mensaje2.hashCode());
+		result = prime * result + ((mensaje3 == null) ? 0 : mensaje3.hashCode());
+		result = prime * result + numeromensajes;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Telefono other = (Telefono) obj;
+		if (mensaje1 == null) {
+			if (other.mensaje1 != null)
+				return false;
+		} else if (!mensaje1.equals(other.mensaje1))
+			return false;
+		if (mensaje2 == null) {
+			if (other.mensaje2 != null)
+				return false;
+		} else if (!mensaje2.equals(other.mensaje2))
+			return false;
+		if (mensaje3 == null) {
+			if (other.mensaje3 != null)
+				return false;
+		} else if (!mensaje3.equals(other.mensaje3))
+			return false;
+		if (numeromensajes != other.numeromensajes)
+			return false;
+		return true;
 	}
 	
 	

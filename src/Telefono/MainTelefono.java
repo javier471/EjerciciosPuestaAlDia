@@ -7,7 +7,11 @@ public class MainTelefono {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner(System.in);
+		try {
 		Telefono t1=new Telefono();
+		System.out.println(t1);
+		int opcion=0;
+		while(opcion<6) {
 		System.out.println("Qué desea hacer?");
 		System.out.println(	"1.Consultar número de mensajes"+"\n"+
 				"2. Consultar mensaje"+"\n"+
@@ -23,7 +27,8 @@ public class MainTelefono {
 				"3. Añadir mensaje"+"\n"+
 				"4. Borrar todos los mensajes"+"\n"+
 				"5. Salir");
-		int opcion=Integer.parseInt(teclado.nextLine());
+		opcion=Integer.parseInt(teclado.nextLine());
+	
 		switch(opcion) {
 			case 1:
 				System.out.println(t1.getNumeromensajes());
@@ -69,7 +74,20 @@ public class MainTelefono {
 				System.out.println("Qué mensaje quieres añadir?");
 				String mensajeAnadir=teclado.nextLine();
 				t1.anadirMensaje(mensajeAnadir);
+				System.out.println(t1);
+				break;
+			case 4:
+				t1.borrarTodosLosMensajes();
+				System.out.println(t1);
+			case 5:
+				System.out.println("Comunicación cortada");
+				break;
 	}	
+	}
+		}
+		catch(Exception t) {
+			System.out.println(t.getMessage());
+		}
 
-}
+	}
 }
