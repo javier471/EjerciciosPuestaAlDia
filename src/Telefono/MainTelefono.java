@@ -64,6 +64,7 @@ public class MainTelefono {
 						}
 					}	
 				}
+				break;
 			case 3:
 				System.out.println("Qué mensaje quieres añadir?");
 				String mensajeAnadir=teclado.nextLine();
