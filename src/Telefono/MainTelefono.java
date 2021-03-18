@@ -37,13 +37,13 @@ public class MainTelefono {
 				System.out.println("Qué mensaje quieres consultar");
 				int nmensaje=Integer.parseInt(teclado.nextLine());
 				if (nmensaje<1 || nmensaje>3) {
-					throw new Exception();
+					throw new Exception("Mensaje no válido");
 				}
 				else if (nmensaje==1) {
 					System.out.println("Pulse 1 para oír y 2 para borrar");
 					int opcionhacer=Integer.parseInt(teclado.nextLine());
 					if (opcionhacer==1) {
-						t1.getMensaje1();
+						System.out.println(t1.getMensaje1());
 					}
 					else if (opcionhacer==2) {
 						t1.borrarMensaje(1);
@@ -52,7 +52,7 @@ public class MainTelefono {
 					System.out.println("Pulse 1 para oír y 2 para borrar");
 					opcionhacer=Integer.parseInt(teclado.nextLine());
 					if (opcionhacer==1) {
-						t1.getMensaje2();
+						System.out.println(t1.getMensaje2());
 					}
 					else if (opcionhacer==2) {
 						t1.borrarMensaje(2);
@@ -62,7 +62,7 @@ public class MainTelefono {
 					System.out.println("Pulse 1 para oír y 2 para borrar");
 					opcionhacer=Integer.parseInt(teclado.nextLine());
 					if (opcionhacer==1) {
-						t1.getMensaje3();
+						System.out.println(t1.getMensaje3());
 					}
 					else if (opcionhacer==2) {
 						t1.borrarMensaje(3);
@@ -71,10 +71,15 @@ public class MainTelefono {
 				}
 				break;
 			case 3:
-				System.out.println("Qué mensaje quieres añadir?");
-				String mensajeAnadir=teclado.nextLine();
-				t1.anadirMensaje(mensajeAnadir);
-				System.out.println(t1);
+				if(t1.getNumeromensajes()==3) {
+					throw new Exception("Buzón lleno");
+				}
+				else {
+					System.out.println("Qué mensaje quieres añadir?");
+					String mensajeAnadir=teclado.nextLine();
+					t1.anadirMensaje(mensajeAnadir);
+					System.out.println(t1);
+				}
 				break;
 			case 4:
 				t1.borrarTodosLosMensajes();

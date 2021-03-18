@@ -4,24 +4,33 @@ public class Telefono {
 	private String mensaje1="";
 	private String mensaje2="";
 	private String mensaje3="";
-	private int numeromensajes;
+	private int numeromensajes=0;
 	public Telefono() {
 		super();
 	}
 	
-	public String getMensaje1() {
+	public String getMensaje1() throws Exception {
+		if(mensaje1=="") {
+			throw new Exception("El mensaje no existe");
+		}
 		return mensaje1;
 	}
 	public void setMensaje1(String mensaje1) {
 		this.mensaje1 = mensaje1;
 	}
-	public String getMensaje2() {
+	public String getMensaje2() throws Exception {
+		if (mensaje2=="") {
+			throw new Exception("El mensaje no existe");
+		}
 		return mensaje2;
 	}
 	public void setMensaje2(String mensaje2) {
 		this.mensaje2 = mensaje2;
 	}
-	public String getMensaje3() {
+	public String getMensaje3() throws Exception {
+		if (mensaje3=="") {
+			throw new Exception("El mensaje no existe");
+		}
 		return mensaje3;
 	}
 	public void setMensaje3(String mensaje3) {
@@ -33,7 +42,7 @@ public class Telefono {
 	public void setNumeromensajes(int numeromensajes) {
 		this.numeromensajes = numeromensajes;
 	}
-	public void anadirMensaje(String mensaje) {
+	public void anadirMensaje(String mensaje) throws Exception {
 		if (mensaje1=="") {
 			this.mensaje1=mensaje;	
 			numeromensajes++;
@@ -45,9 +54,6 @@ public class Telefono {
 		else if (mensaje3=="") {
 			this.mensaje3=mensaje;
 			numeromensajes++;
-		}
-		else {
-			System.out.println("El buzón está lleno");
 		}
 		
 	}
