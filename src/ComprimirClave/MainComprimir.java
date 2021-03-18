@@ -6,6 +6,7 @@ public class MainComprimir {
 		// TODO Auto-generated method stub
 		
 		System.out.println(descomprimir("k3a2p2"));
+		System.out.println(comprimir("kkkaapp"));
 	}
 	public static String descomprimir(String cadena) {
 		StringBuilder result=new StringBuilder();
@@ -19,4 +20,26 @@ public class MainComprimir {
 	}
 		return result.toString();
 	}
+	public static String comprimir(String cadena) {
+		int cont=1;
+		StringBuilder result=new StringBuilder();
+		for(int i=0;i<cadena.length();i++) {
+			char caracter=cadena.charAt(i);
+			if(caracter==cadena.charAt(i+1)) {
+				cont++;
+			}
+			else {
+				result.append(cont).append(caracter);
+				cont=0;
+			}
+			
+		}
+		return result.toString();	
+	}
+	
+	
+	
+	
+	
+	
 }
