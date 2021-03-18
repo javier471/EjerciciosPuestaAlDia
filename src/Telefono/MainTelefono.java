@@ -16,14 +16,14 @@ public class MainTelefono {
 		System.out.println(	"1.Consultar número de mensajes"+"\n"+
 				"2. Consultar mensaje"+"\n"+
 					"1. Mensaje número 1"+"\n"+
-						"1. Oír"+"\n"+
-						"2. Borrar"+"\n"+
+						"a. Oír"+"\n"+
+						"b. Borrar"+"\n"+
 					"2. Mensaje número 2"+"\n"+
-						"1. Oír"+"\n"+
-						"2. Borrar"+"\n"+
+						"a. Oír"+"\n"+
+						"b. Borrar"+"\n"+
 					"3. Mensaje número 3"+"\n"+
-						"1. Oír"+"\n"+
-						"2. Borrar"+"\n"+
+						"a. Oír"+"\n"+
+						"b. Borrar"+"\n"+
 				"3. Añadir mensaje"+"\n"+
 				"4. Borrar todos los mensajes"+"\n"+
 				"5. Salir");
