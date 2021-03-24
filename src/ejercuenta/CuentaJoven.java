@@ -10,6 +10,10 @@ public class CuentaJoven extends Cuenta {
 		this.titular=titular;
 		this.bonificacion=bonificacion;
 		this.edad=edad;
+		if (esTitularValido()==false) {
+			throw new Exception("No es un titular válido");
+		}
+		
 	}
 
 	public String getTitular() {
@@ -42,6 +46,11 @@ public class CuentaJoven extends Cuenta {
 		else {
 			throw new Exception("No es un titular válido");
 		}
+	}
+
+	@Override
+	public String toString() {
+		return "CuentaJoven [titular=" + titular + ", bonificacion=" + (super.getSaldo()+(super.getSaldo()*(bonificacion/100.0)))+", edad=" + edad + "]";
 	}
 	
 	
