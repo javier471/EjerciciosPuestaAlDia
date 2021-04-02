@@ -4,6 +4,7 @@ public class Barco {
 	private String matricula;
 	private double eslora;
 	private int ffabri;
+	private final int precioeslora=10;
 	public Barco(String matricula, double eslora, int ffabri) {
 		super();
 		this.matricula = matricula;
@@ -28,8 +29,8 @@ public class Barco {
 	public void setFfabri(int ffabri) {
 		this.ffabri = ffabri;
 	}
-	public double precioBarco() {
-		return 10*this.eslora;
+	public double getAlquiler() {
+		return this.precioeslora*this.eslora;
 	}
 	@Override
 	public String toString() {

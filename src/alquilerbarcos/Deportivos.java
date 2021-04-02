@@ -7,8 +7,8 @@ public Deportivos(String matricula, double eslora, int ffabri, int caballos) {
 	super(matricula, eslora, ffabri);
 	this.caballos=caballos;
 }
-public double precioBarco() {
-	return 10*super.getEslora()+this.caballos;
+public double getAlquiler() {
+	return super.getAlquiler()+this.caballos;
 
 }
 }

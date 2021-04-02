@@ -15,8 +15,8 @@ public int getNmastiles() {
 public void setNmastiles(int nmastiles) {
 	this.nmastiles = nmastiles;
 }
- public double precioBarco() {
-		return 10*super.getEslora()+this.nmastiles;
+ public double getAlquiler() {
+		return super.getAlquiler()+this.nmastiles;
 
  }
 }

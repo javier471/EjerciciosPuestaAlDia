@@ -20,8 +20,8 @@ public class Yate extends Barco{
 	public void setNcamarotes(int ncamarotes) {
 		this.ncamarotes = ncamarotes;
 	}
-	public double precioBarco() {
-		return 10*super.getEslora()+this.caballos+this.ncamarotes;
+	public double getAlquiler() {
+		return super.getAlquiler()+this.caballos+this.ncamarotes;
 
  }
 }
